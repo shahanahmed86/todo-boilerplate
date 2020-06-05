@@ -1,34 +1,19 @@
 {
 	"name": "myapp",
-	"version": "0.1.0",
-	"private": true,
-	"dependencies": {
-		"@material-ui/core": "^4.10.1",
-		"@material-ui/icons": "^4.9.1",
-		"@testing-library/jest-dom": "^4.2.4",
-		"@testing-library/react": "^9.3.2",
-		"@testing-library/user-event": "^7.1.2",
-		"react": "^16.13.1",
-		"react-dom": "^16.13.1",
-		"react-router-dom": "^5.2.0",
-		"react-scripts": "3.4.1"
-	},
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "https://github.com/shahanahmed86/todo-boilerplate",
+	"author": "shahanahmed86 <shahan.khaan@gmail.com>",
+	"license": "MIT",
 	"scripts": {
-		"start": "react-scripts start",
-		"build": "react-scripts build",
-		"test": "react-scripts test",
-		"eject": "react-scripts eject"
-	},
-	"eslintConfig": {
-		"extends": "react-app"
-	},
-	"browserslist": {
-		"production": [ ">0.2%", "not dead", "not op_mini all" ],
-		"development": [ "last 1 chrome version", "last 1 firefox version", "last 1 safari version" ]
+		"dev": "nodemon . --ignore './client/*'",
+		"start": "node .",
+		"postinstall": "cd client && yarn install"
 	},
 	"devDependencies": {
-		"babel-plugin-transform-imports": "^2.0.0",
-		"customize-cra": "^0.9.1",
-		"react-app-rewired": "^2.1.6"
+		"nodemon": "^2.0.4"
+	},
+	"dependencies": {
+		"express": "^4.17.1"
 	}
 }

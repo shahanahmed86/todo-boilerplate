@@ -4,7 +4,7 @@ import React, { Fragment } from 'react';
 import { TextField } from '../';
 
 //mui components
-import { Button, Grid } from '@material-ui/core';
+import { Button, Grid, Typography } from '@material-ui/core';
 
 //contextapi
 import { withMainContext } from '../../contextapi';
@@ -47,6 +47,7 @@ function Todo({
 			>
 				{Array.isArray(todo) && todo.filter((v) => v.isDone === false).length ? (
 					<Grid item container sm={5} justify="center">
+						<Typography color="secondary" variant="body1" children="PENDING things to do" />
 						<RenderTodo
 							todo={todo.filter((v) => v.isDone === false)}
 							toggleStatus={toggleStatus}
@@ -59,6 +60,7 @@ function Todo({
 				)}
 				{Array.isArray(todo) && todo.filter((v) => v.isDone === true).length ? (
 					<Grid item container sm={5} justify="center">
+						<Typography color="primary" variant="body1" children="things has been DONE" />
 						<RenderTodo
 							todo={todo.filter((v) => v.isDone === true)}
 							toggleStatus={toggleStatus}
